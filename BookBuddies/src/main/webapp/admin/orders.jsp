@@ -46,7 +46,7 @@
 			%>
 
 			<tr>
-				<th scope="row"><%=b.getId()%></th>
+				<th>Book-ORD-00<%=b.getId()%></th>
 				<td><%=b.getUserName()%></td>
 				<td><%=b.getEmail()%></td>
 				<td><%=b.getFulladd()%></td>

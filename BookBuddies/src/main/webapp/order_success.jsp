@@ -35,5 +35,8 @@
 		<a href="index.jsp" class="btn btn-primary mt-3">Home</a> <a
 			href="order.jsp" class="btn btn-danger mt-3">View Order</a>
 	</div>
+	<div style="margin-top:10%;">
+		<%@include file="all_Components/footer.jsp"%>
+	</div>
 </body>
 </html>

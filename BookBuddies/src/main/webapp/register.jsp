@@ -73,6 +73,8 @@
 			</div>
 		</div>
 	</div>
-<%-- 	<%@include file="all_component/footer.jsp"%> --%>
+	<div style="margin-top: 5%;">
+		<%@include file="all_Components/footer.jsp"%>
+	</div>
 </body>
 </html>

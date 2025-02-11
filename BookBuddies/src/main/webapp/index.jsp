@@ -33,14 +33,16 @@
 	%>
 	<%@include file="all_Components/navbar.jsp"%>
 	<div class="container-fluid back-img">
-		<h2 class="text-center">Ebook Management System</h2>
+	   <div style="padding-top: 75vh;">
+		<h4 class="text-right font-italic text-danger" > "Read. Resell. Repeat. A book’s journey never ends!"</h4>
+	   </div>
 	</div>
 
 
 	<!-- start Recent Book-->
 
 	<div class="container-fluid">
-		<h3 class="text-center">Recent Books</h3>
+		<h3 class="text-center" style="text-decoration: underline;">* Recent Books *</h3>	
 		<div class="row">
 			<%
 			BookDAOImpl dao = new BookDAOImpl(DBConnect.getConn());
@@ -65,8 +67,8 @@
 							<b>Categories : <%=b.getBookCategory()%></b>
 						</p>
 						<div class="row">
-						    <a href=" " class="ml-5"></a>
-							<a href="view_books.jsp?bid=<%=b.getBookId()%> "
+							<a href=" " class="ml-5"></a> <a
+								href="view_books.jsp?bid=<%=b.getBookId()%> "
 								class="btn btn-success btn-sm ml-5">View Details</a> <a href=" "
 								class="btn btn-danger btn-sm ml-1"><i
 								class="fa-solid fa-indian-rupee-sign"></i> <%=b.getPrice()%></a>
@@ -121,7 +123,7 @@
 	<!-- start New Book-->
 
 	<div class="container-fluid">
-		<h3 class="text-center">New Books</h3>
+		<h3 class="text-center" style="text-decoration: underline;">* New Books *</h3>
 		<div class="row">
 
 			<%
@@ -180,7 +182,7 @@
 	<!-- start Old Book-->
 
 	<div class="container-fluid">
-		<h3 class="text-center">Old Books</h3>
+		<h3 class="text-center" style="text-decoration: underline;">* Old Books *</h3>
 		<div class="row">
 			<%
 			List<BookDtls> list3 = dao.getOldBooks();
@@ -221,6 +223,8 @@
 	</div>
 	<!-- End Old Book -->
 	<hr>
-	<%-- 	<%@include file="all_component/footer.jsp"%> --%>
+	<div class="mt-5">
+		<%@include file="all_Components/footer.jsp"%>
+	</div>
 </body>
 </html>

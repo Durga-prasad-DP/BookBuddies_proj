@@ -5,9 +5,9 @@
 <div class="container-fluid p-3 bg-light">
 	<div class="row">
 		<div class="col-md-3 text-success">
-			<h3>
-				<i class="fa-sharp fa-solid fa-book"></i> Ebooks
-			</h3>
+			<h3 class="mb-0"><i class="fa-sharp fa-solid fa-book"></i> BookBuddies</h3>
+			<p class="text-sm-left text-secondary">-"Books bring us together let's keep sharing!"</p>
+		
 		</div>
 
 		<div class="col-md-3">

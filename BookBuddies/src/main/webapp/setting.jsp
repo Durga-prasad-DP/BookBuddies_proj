@@ -50,10 +50,10 @@ a:hover {
 				<a href="old_book.jsp">
 					<div class="card">
 						<div class="card-body text-center mt-4">
-							<div class="text-primary">
+							<div class="text-warning">
 								<i class="fas fa-book-open fa-3x"></i>
 							</div>
-							<h4>Old Book</h4>
+							<h4>Your Old Books</h4>
 						</div>
 					</div>
 				</a>
@@ -62,11 +62,11 @@ a:hover {
 			<div class="col-md-4">
 				<a href="edit_profile.jsp">
 					<div class="card">
-						<div class="card-body text-center">
+						<div class="card-body text-center mt-4">
 							<div class="text-primary">
 								<i class="fas fa-edit fa-3x"></i>
 							</div>
-							<h4>Login & Security (Edit Profile)</h4>
+							<h4>Edit Profile</h4>
 						</div>
 					</div>
 				</a>
@@ -91,7 +91,7 @@ a:hover {
 				<a href="helpline.jsp">
 					<div class="card">
 						<div class="card-body text-center">
-							<div class="text-primary">
+							<div class="text-info">
 								<i class="fas fa-user-circle fa-3x"></i>
 							</div>
 							<h4>Help Center</h4>
@@ -105,6 +105,8 @@ a:hover {
 	</div>
 
 	<hr>
-<%-- 	<p><%@include file="all_Components/footer.jsp"%></p> --%>
+	<div style="margin-top: 5%;">
+		<%@include file="all_Components/footer.jsp"%>
+	</div>
 </body>
 </html>

@@ -57,5 +57,8 @@
 			</tbody>
 		</table>
 	</div>
+	<div style="margin-top:10%;">
+		<%@include file="all_Components/footer.jsp"%>
+	</div>
 </body>
 </html>
