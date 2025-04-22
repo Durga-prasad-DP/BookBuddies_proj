@@ -12,6 +12,9 @@
 <%@include file="all_Components/allCss.jsp"%>
 </head>
 <body style="background-color: #f0f1f2;">
+	<%
+	User u = (User) session.getAttribute("userobj");
+	%>
 	<%@include file="all_Components/navbar.jsp"%>
 	<%
 	int bid = Integer.parseInt(request.getParameter("bid"));
@@ -25,12 +28,10 @@
 				<img src="book/<%=b.getPhotoName()%>"
 					style="height: 150px; width: 120px"><br>
 				<h4 class="mt-3">
-					Book Name: <span class="text-success"><%=b.getBookName()%>
-					</span>
+					Book Name: <span class="text-success"><%=b.getBookName()%> </span>
 				</h4>
 				<h4>
-					Author Name: <span class="text-success"><%=b.getAuthor()%>
-					</span>
+					Author Name: <span class="text-success"><%=b.getAuthor()%> </span>
 				</h4>
 				<h4>
 					Category: <span class="text-success"><%=b.getBookCategory()%>
@@ -81,15 +82,33 @@
 					<a href="index.jsp" class="btn btn-success"><i
 						class="fas fa-cart-plus"></i> Continue Shopping </a> <a href=""
 						class="btn btn-danger"><i
-						class="fa-solid fa-indian-rupee-sign"></i> 200</a>
+						class="fa-solid fa-indian-rupee-sign"></i><%=b.getPrice()%></a>
 				</div>
 				<%
 				} else {
 				%>
 				<div class="text-center p-3">
-					<a href="" class="btn btn-primary"><i class="fas fa-cart-plus"></i>
+					<%-- <a href="" class="btn btn-primary"><i class="fas fa-cart-plus"></i>
 						Add Cart</a> <a href="" class="btn btn-danger"><i
-						class="fa-solid fa-indian-rupee-sign"></i> 200</a>
+						class="fa-solid fa-indian-rupee-sign"></i><%=b.getPrice() %></a> --%>
+					<%
+					if (u == null) {
+					%>
+					<a href="login.jsp" class="btn btn-danger "><i
+						class="fas fa-cart-plus"></i> Add Cart</a>
+						 <a href="" class="btn btn-danger"><i
+						class="fa-solid fa-indian-rupee-sign"></i><%=b.getPrice() %></a>
+					<%
+					} else {
+					%>
+					<a href="cart?bid=<%=b.getBookId()%>&&uid=<%=u.getId()%>"
+						class="btn btn-primary"><i class="fas fa-cart-plus"></i>
+						Add Cart</a>
+						 <a href="" class="btn btn-danger"><i
+						class="fa-solid fa-indian-rupee-sign"></i><%=b.getPrice() %></a> 
+					<%
+					}
+					%>
 				</div>
 				<%
 				}
@@ -99,7 +118,7 @@
 
 		</div>
 	</div>
-	<div style="margin-top:10%;">
+	<div style="margin-top: 10%;">
 		<%@include file="all_Components/footer.jsp"%>
 	</div>
 </body>
